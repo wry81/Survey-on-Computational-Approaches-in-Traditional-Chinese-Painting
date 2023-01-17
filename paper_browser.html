@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Regulatory Visualization</title>
+		<link rel="stylesheet" href="./css/browser.css" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="https://d3js.org/d3.v5.min.js"></script>
+		<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+		<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+        <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?c01cb58dec394edf6e5b7c2f4c28b599";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+            
+	</head>
+<body>
+    <div id="h">
+        <div id="head1"  style="height:73px;">
+            <span class="title">Survey on Computational Approaches in Traditional Chinese Painting</span>
+            <div class="menu">
+                <a href="index.html">Introduction</a>
+                <a href="overview.html">Overview</a>
+                <a id="selected" href="paper_browser.html">Paper Browser</a>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="grid-container">
+        <div id="controls">
+            <h3 id="h3_six_canons"> The Six Canons </h3>
+            <div id="filters_six_canons">
+                <select class="demo" multiple="multiple">
+                    <optgroup label="The_Six_Canons">
+                        <option value="Spirit Resonance">Spirit Resonance</option>
+                        <option value="Bone Method">Bone Method</option>
+                        <option value="Correspondence to the Object">Correspondence to the Object</option>
+                        <option value="Suitability to Type">Suitability to Type</option>
+                        <option value="Division and Planning">Division and Planning</option>
+                        <option value="Transmission by Copying">Transmission by Copying</option>
+                        <option value="None">None</option>
+                    </optgroup>
+                </select>  
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h3 id="h3_computational_techniques"> Computational Techniques </h3>
+            <div id="filters_computational_techniques">
+                <select  class="demo" multiple="multiple">
+                    <optgroup label="Task">
+                        <option value="Image Classification">Image Classification</option>
+                        <option value="Image Segmentation">Image Segmentation</option>
+                        <option value="Object Detection">Object Detection</option>
+                        <option value="Image Generation">Image Generation</option>
+                        <option value="Video Generation">Video Generation</option>
+                        <option value="Virtual Reality">Virtual Reality</option>
+                        <option value="Others">Others</option>
+                        <option value="None">None</option>
+                    </optgroup>
+
+                    <optgroup label="Feature_Extraction">
+                        <option value="Handcrafted Features">Handcrafted Features</option>
+                        <option value="Learned Features">Learned Features</option>
+                        <option value="None">None</option>
+                    </optgroup>
+
+                    <optgroup label="Rendering">
+                        <option value="Morphology/Graphical Methods">Morphology/Graphical Methods</option>
+                        <option value="Diffusion Model">Diffusion Model</option>
+                        <option value="Reinforcement Learning">Reinforcement Learning</option>
+                        <option value="Image-Based">Image-Based</option>
+                        <option value="Geometric-Based">Geometric-Based</option>
+                        <option value="None">None</option>
+                    </optgroup>
+                </select>  
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h3 id="h3_analytical_framework"> Analytical Framework </h3>
+            <div id="filters_analytical_framework">
+                <select  class="demo" multiple="multiple">
+                    <optgroup label="Digitalization">
+                        <option value="Storage">Storage</option>
+                        <option value="Retrieval">Retrieval</option>
+                        <option value="Restoration">Restoration</option>
+                        <option value="None">None</option>
+                    </optgroup>
+
+                    <optgroup label="Interpretation">
+                        <option value="Feature Extraction">Feature Extraction</option>
+                        <option value="Classification">Classification</option>
+                        <option value="None">None</option>
+                    </optgroup>
+
+                    <optgroup label="Creation">
+                        <option value="Image Generation">Image Generation</option>
+                        <option value="Video Generation">Video Generation</option>
+                        <option value="Model">Model</option>
+                        <option value="None">None</option>
+                    </optgroup>
+
+                    <optgroup label="Exhibition">
+                        <option value="XR">XR</option>
+                        <option value="Interactive">Interactive</option>
+                        <option value="Others">Others</option>
+                        <option value="None">None</option>
+                    </optgroup>
+                </select>  
+            </div>
+
+
+            <br />
+            <br>
+            <br>
+            <br>
+            <div style="text-align:center">
+                <div class="el-input" style="width: 200px; height: 30px; border-radius: 12px; text-align:center">
+                    <input type="text" id="search"autocomplete="off" placeholder="search" class="input_search" style="width:192px;">
+                </div>
+            </div>
+            <br />
+            <div style="text-align:left">
+            ( Numbers of techniques:<span id="count"></span> )
+            </div>
+            <!-- <div style="text-align:center">
+                <a href="datas.csv" target="_blank">Export Data</a>
+            </div> -->
+            
+        </div>
+        <div id="container" class="grid"></div>
+    </div>
+    <script type="text/javascript" src="./js/regvis.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/fSelect.js"></script>
+    <script>
+$(function() {
+    $('.demo').fSelect();
+});
+</script>
+</body>
+</html>

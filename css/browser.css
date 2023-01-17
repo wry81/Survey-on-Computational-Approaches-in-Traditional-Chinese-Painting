@@ -1,0 +1,285 @@
+html,
+body {
+	font-family: "Open Sans", sans-serif;
+	background-color: #fff;
+	margin: 0;
+	padding: 0;
+	font-size: 13px;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 20% 80%;
+	grid-template-rows: 1fr;
+	align-content: stretch;
+	justify-content: stretch;
+	margin: 25px 20px;
+}
+
+.grid-container a {
+	color: #222;
+}
+#controls {
+	grid-row: 1;
+	grid-column: 1;
+    color:#000000;
+}
+#container {
+	grid-row: 1;
+	grid-column: 2;
+	margin-left: 20px;
+}
+
+.grid-item {
+	width: 220px;
+	background-color: #F5F3EF;
+	color: #222;
+    box-shadow: 3px 3px 5px 2px #e8e8e8;
+    border-radius: 10px;
+	/* box-shadow: #000000 0 0 5px; */
+	margin: 8px 0;
+	padding: 8px;
+	font-weight: 300;
+}
+.grid-item span{
+    color: #A49080;
+}
+.grid-item a{
+    color: #A49080;
+}
+
+#controls h3{
+    margin:10px 1px;
+    font-size:17px;
+}
+
+.grid-item h2 {
+	font-size: 14px;
+	font-weight: 600;
+	text-shadow: none;
+	margin: 8px 0;
+}
+
+.grid-item img {
+	max-width: 100%;
+}
+
+.checkbox-container{
+    border:1px solid #e7e1e1;
+
+}
+.collasped{
+    display:none;
+
+}
+
+.title{
+    font-size: 30px;
+    font-weight: 600;
+    color: #A49080;
+}
+
+#h {
+    margin: 10px 10px;
+    padding: 10px 20px;
+    background:#F0ECE4;
+    height:80px;
+    text-align:left;
+}
+
+.menu{
+    height: 40px;
+    border-bottom: 1px solid #A49080;
+    color: #A49080;
+}
+.menu a{
+    margin: 0 16px;
+    /* padding: 0 16px; */
+    height: 38px;
+    /* background-color: #edeef0; */
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #A49080;
+}
+.menu a:hover{
+    font-weight: 700;
+    border-bottom: 3px solid #A49080;
+}
+#selected{
+    font-weight: 700;
+    border-bottom: 3px solid #A49080;
+}
+
+/* .demo{
+    background:#F0ECE4;  
+    height:28px;  
+    width:180px;  
+    line-height:28px;  
+    border:1px solid #A49080;  
+    -moz-border-radius:8px;  
+    -webkit-border-radius:8px;  
+    border-radius:8px; 
+} */
+
+.fs-wrap {
+    position: relative;
+    display: inline-block;
+    width: 250px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.fs-label-wrap {
+    position: relative;
+    background-color: #F0ECE4;
+    border: 1px solid #A49080;
+    border-radius: 10px;
+    cursor: default;
+}
+
+.fs-label-wrap,
+.fs-dropdown {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.fs-label-wrap .fs-label {
+    padding: 4px 22px 4px 8px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.fs-arrow {
+    width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 7px solid #A49080;
+    position: absolute;
+    top: 0;
+    right: 5px;
+    bottom: 0;
+    margin: auto;
+}
+
+.fs-dropdown {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    width: 100%;
+    z-index: 1000;
+}
+
+.fs-dropdown .fs-options {
+    height: 200px;
+    max-height: 2000px;
+    overflow: auto;
+    resize: vertical;
+}
+
+.fs-search input {
+    width: 100%;
+    padding: 2px 4px;
+    border: 0;
+    text-align:center
+}
+
+.fs-option,
+.fs-search,
+.fs-optgroup-label {
+    padding: 6px 8px;
+    border-bottom: 1px solid #eee;
+    cursor: default;
+}
+
+.fs-option {
+    cursor: pointer;
+}
+
+.fs-option.hl {
+    background-color: #f5f5f5;
+}
+
+.fs-wrap.multiple .fs-option {
+    position: relative;
+    padding-left: 30px;
+}
+
+.fs-wrap.multiple .fs-checkbox {
+    position: absolute;
+    display: block;
+    width: 30px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.fs-wrap.multiple .fs-option .fs-checkbox i {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #aeaeae;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+.fs-wrap.multiple .fs-option.selected .fs-checkbox i {
+    background-color: rgb(17, 169, 17);
+    border-color: transparent;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAYAAAD+Bd/7AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNXG14zYAAABMSURBVAiZfc0xDkAAFIPhd2Kr1WRjcAExuIgzGUTIZ/AkImjSofnbNBAfHvzAHjOKNzhiQ42IDFXCDivaaxAJd0xYshT3QqBxqnxeHvhunpu23xnmAAAAAElFTkSuQmCC');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.fs-wrap .fs-option:hover {
+    background-color: #f5f5f5;
+}
+
+.fs-optgroup-label {
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+#count {
+	font-weight: bold;
+}
+
+#showall {
+	border-bottom: 1px solid #fafafa;
+	cursor: pointer;
+}
+#h3_six_canons{
+    text-align:center;
+}
+#filters_six_canons{
+    text-align:center;
+    font-size:20px;
+}
+#h3_analytical_framework{
+    text-align:center;
+}
+#filters_analytical_framework{
+    text-align:center;
+    font-size:20px;
+}
+#h3_computational_techniques{
+    text-align:center;
+}
+#filters_computational_techniques{
+    text-align:center;
+    font-size:20px;
+}
